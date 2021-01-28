@@ -72,34 +72,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 "# e-commace-site-using-React-2021" 
 
 
-## You can check that both are installed correctly by issuing the following commands from the command line:
+### You can check that both are installed correctly by issuing the following commands from the command line:
    node -v
 > 12.18.4
 
 npm -v
 > 6.14.8 `
 
-##  With that done, let’s start off by creating a new React project with the ** Create React App tool **. You can either install this globally, or use npx, like so:
+###  With that done, let’s start off by creating a new React project with the `Create React App tool`. You can either install this globally, or use npx, like so:
 
 ` npx create-react-app e-commerce `
 
-## When this has finished, change into the newly created directory:
+### When this has finished, change into the newly created directory:
 
 `cd e-commerce`
 
-## In this application, we’ll use React Router to handle the routing. To install this module, run:
+### In this application, we’ll use React Router to handle the routing. To install this module, run:
 
 `npm install react-router-dom`
 
-## We’ll also need json-server and json-server-auth to create our fake back end to handle authentication:
+### We’ll also need json-server and json-server-auth to create our fake back end to handle authentication:
 
 `npm install json-server json-server-auth `
 
-## We’ll need axios for making Ajax requests to our fake back end.
+### We’ll need axios for making Ajax requests to our fake back end.
 ` npm install axios `
 
-## And we’ll need jwt-decode so that we can parse the JWT that our back end will respond with:
+### And we’ll need jwt-decode so that we can parse the JWT that our back end will respond with:
 ` npm install jwt-decode `
 
-## Finally, we’ll use the Bulma CSS framework to style this application. To install this, run the following command:
+### Finally, we’ll use the Bulma CSS framework to style this application. To install this, run the following command:
 `npm install bulma `
