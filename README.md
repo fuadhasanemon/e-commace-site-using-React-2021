@@ -103,3 +103,41 @@ npm -v
 
 ### Finally, we’ll use the Bulma CSS framework to style this application. To install this, run the following command:
 `npm install bulma `
+
+## Getting Started
+First, we need to add the stylesheet to our application. To achieve this, we’ll add an import statement to include this file in the `index.js` file in the `src` folder. This will apply the style sheet across all the components in the application:
+
+`import "bulma/css/bulma.css";`
+
+### Context Setup
+As previously mentioned, we’ll be using React Context throughout our app. This is a relatively new addition to React and provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+In order to create the context, we create a Context.js file and a withContext.js files in our app’s src directory:
+Then add the following to `Context.js` :
+```
+import React from "react";
+const Context = React.createContext({});
+export default Context;
+```
+This creates the context and initializes the context data to an empty object. Next, we need to create a component wrapper, which we’ll use to wrap components that use the context data and methods:
+```
+// src/withContext.js
+
+import React from "react";
+import Context from "./Context";
+
+const withContext = WrappedComponent => {
+  const WithHOC = props => {
+    return (
+      <Context.Consumer>
+        {context => <WrappedComponent {...props} context={context} />}
+      </Context.Consumer>
+    );
+  };
+
+  return WithHOC;
+};
+
+export default withContext;
+```
+
